@@ -1,0 +1,15 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: sergeysmtest5
+spec:
+  environments:
+    - name: dev
+      build:
+        from: main
+  components:
+    - name: server
+      src: ./server
+      ports:
+      - name: http
+        port: 3000
