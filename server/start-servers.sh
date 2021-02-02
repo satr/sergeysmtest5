@@ -7,6 +7,8 @@ for PORT in {32001..32005}
     echo "started ${PORT}";
 done
 
+python3 -m http.server 3000 &
+
 while true
  do
    for PORT in {32001..32005}
